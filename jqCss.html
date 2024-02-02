@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="background-color: green;"></div>
+    <button id="button1">css(ele)</button>
+    <button id="button2">css(ele,style)</button>
+    <p id="result">결과표시</p>
+    <script>
+        $(document).ready(function(){
+           $("#button1").click(function(){
+               // div1의 칼라값을 가져옴
+               var color = $("#div1").css("background-color");
+               $("#result").text("bgcolor:"+color);
+           });
+           $("#button2").click(function(){
+               $("#div1").css("background-color","red");
+           });
+        });
+    
+
+
+           
+    </script>
+    
+</body>
+</html>
