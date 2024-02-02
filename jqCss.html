@@ -17,7 +17,19 @@
     <button id="button1">css(ele)</button>
     <button id="button2">css(ele,style)</button>
     <p id="result">결과표시</p>
-
+    <script>
+        $(document).ready(function(){
+           $("#button1").click(function(){
+               // div1의 칼라값을 가져옴
+               var color = $("#div1").css("background-color");
+               $("#result").text("bgcolor:"+color);
+           });
+           $("#button2").click(function(){
+               $("#div1").css("background-color","red");
+           });
+        });
+    </script>
+    
     
 </body>
 </html>
